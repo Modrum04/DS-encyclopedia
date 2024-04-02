@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  width: 80dvw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -34,9 +34,78 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
+  display: flex;
+  background-color: rgba(126, 126, 138, 0.3);
+}
+
+.card:hover {
+  background-color: rgba(220, 136, 76, 0.497);
 }
 
 .read-the-docs {
   color: #888;
+}
+
+img {
+  max-width: 50%;
+  object-fit: contain;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.bonefire {
+  max-width: 20dvw;
+
+  filter: drop-shadow(0 0 5em #61dafbaa);
+}
+.bonefire:hover {
+  max-width: 20dvw;
+
+  filter: drop-shadow(0 0 15em rgb(243, 106, 15, 8));
+}
+.invisible {
+  display: none;
+}
+.personnal-class-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  min-height: 50dvh;
+  background-color: rgba(117, 79, 41, 0.123);
+  padding: 1rem;
+}
+.personnal-card-container {
+  margin-top: 2rem;
+  background-color: rgba(3, 4, 52, 0.295);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.personnal-card-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.personnal-card-container li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.personnal-card-container li div {
+  order: 1;
+}
+.personnal-card-container li button {
+  order: 2;
 }
