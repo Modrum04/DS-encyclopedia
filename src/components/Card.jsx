@@ -16,7 +16,7 @@ function Card({ character, setSelectedCharacter, selectedCharacter }) {
   } = character.stats;
 
   const handleClickSelectCharacter = () => {
-    setSelectedCharacter({ character });
+    setSelectedCharacter(character);
   };
 
   return (
