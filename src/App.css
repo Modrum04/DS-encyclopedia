@@ -65,11 +65,12 @@ li {
   max-width: 20dvw;
 
   filter: drop-shadow(0 0 5em #61dafbaa);
+  animation: 3s ease-in-out infinite alternate burnin;
 }
 .bonefire:hover {
   max-width: 20dvw;
 
-  filter: drop-shadow(0 0 15em rgb(243, 106, 15, 8));
+  filter: drop-shadow(0 0 25em rgb(218, 47, 0));
 }
 .invisible {
   display: none;
@@ -108,4 +109,48 @@ li {
 }
 .personnal-card-container li button {
   order: 2;
+}
+.avatar.lowlvl {
+  filter: drop-shadow(0 0 5px rgba(0, 64, 255, 0.257));
+  --color: rgba(0, 64, 255, 0.257);
+  animation: 3s ease-in-out infinite alternate irradiant;
+}
+.avatar.mediumlvl {
+  filter: drop-shadow(0 0 20px rgb(255, 174, 0));
+  --color: rgb(255, 174, 0);
+  animation: 3s ease-in-out infinite alternate irradiant;
+}
+.avatar.highlvl {
+  filter: drop-shadow(0 0 100px red);
+  --color: red;
+  animation: 3s ease-in-out infinite alternate irradiant;
+}
+.avatar {
+  transition: filter 1.5s ease-in-out;
+}
+
+@keyframes burnin {
+  from {
+    filter: drop-shadow(0 -10px 5px rgba(0, 21, 255, 0.291)) saturate(0%);
+  }
+  50% {
+    filter: drop-shadow(0 -10px 50px rgba(197, 64, 3, 0.719)) saturate(50%);
+  }
+
+  to {
+    filter: drop-shadow(0 -10px 100px rgb(255, 98, 0)) saturate(100%);
+  }
+}
+
+@keyframes irradiant {
+  from {
+    filter: drop-shadow(0 -10px 5px var(--color));
+  }
+  50% {
+    filter: drop-shadow(0 -10px 50px var(--color));
+  }
+
+  to {
+    filter: drop-shadow(0 -10px 100px var(--color));
+  }
 }

@@ -20,9 +20,14 @@ function Builder() {
   function addAttributes(stat) {
     setSelectedCharacter({
       ...selectedCharacter,
-      stats: { ...selectedCharacter.stats, [stat]: selectedCharacter.stats[stat] + 1 },
+      stats: {
+        ...selectedCharacter.stats,
+        [stat]: selectedCharacter.stats[stat] + 1,
+        level: selectedCharacter.stats.level + 1,
+      },
     });
   }
+
   return (
     <>
       <h3>Consume souls</h3>
@@ -77,7 +82,12 @@ function Builder() {
           </ul>
         </div>
 
-        <img src={avatar}></img>
+        <img
+          src={avatar}
+          className={`avatar ${
+            level < 15 ? "lowlvl" : level < 25 ? "mediumlvl" : level < 35 && "highlvl"
+          }`}
+        ></img>
       </div>
     </>
   );

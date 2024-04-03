@@ -20,12 +20,7 @@ function Card({ character, setSelectedCharacter, selectedCharacter }) {
   };
 
   return (
-    <Link
-      className="card"
-      onClick={handleClickSelectCharacter}
-      to={"/builder"}
-      context={[selectedCharacter, setSelectedCharacter]}
-    >
+    <Link className="card" onClick={handleClickSelectCharacter} to={"/builder"}>
       <div className="class-container">
         <h2>Class : {startingClass}</h2>
         <p>{description}</p>
